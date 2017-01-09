@@ -1,0 +1,484 @@
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccmp2gTy.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	Tx_Data
+  19              		.bss
+  20              		.type	Tx_Data, %object
+  21              		.size	Tx_Data, 1
+  22              	Tx_Data:
+  23 0000 00       		.space	1
+  24              		.section	.text.main,"ax",%progbits
+  25              		.align	2
+  26              		.global	main
+  27              		.thumb
+  28              		.thumb_func
+  29              		.type	main, %function
+  30              	main:
+  31              	.LFB56:
+  32              		.file 1 ".\\main.c"
+   1:.\main.c      **** /* ========================================
+   2:.\main.c      ****  *
+   3:.\main.c      ****  * Copyright YOUR COMPANY, THE YEAR
+   4:.\main.c      ****  * All Rights Reserved
+   5:.\main.c      ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:.\main.c      ****  *
+   7:.\main.c      ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:.\main.c      ****  * WHICH IS THE PROPERTY OF your company.
+   9:.\main.c      ****  *
+  10:.\main.c      ****  * ========================================
+  11:.\main.c      **** */
+  12:.\main.c      **** #include <project.h>
+  13:.\main.c      **** uint8 Tx_Data = 0x0;
+  14:.\main.c      **** int main()
+  15:.\main.c      **** {
+  33              		.loc 1 15 0
+  34              		.cfi_startproc
+  35              		@ args = 0, pretend = 0, frame = 0
+  36              		@ frame_needed = 1, uses_anonymous_args = 0
+  37 0000 80B5     		push	{r7, lr}
+  38              		.cfi_def_cfa_offset 8
+  39              		.cfi_offset 7, -8
+  40              		.cfi_offset 14, -4
+  41 0002 00AF     		add	r7, sp, #0
+  42              		.cfi_def_cfa_register 7
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccmp2gTy.s 			page 2
+
+
+  16:.\main.c      ****  CAN_1_Start();
+  43              		.loc 1 16 0
+  44 0004 FFF7FEFF 		bl	CAN_1_Start
+  17:.\main.c      ****  CyGlobalIntEnable;
+  45              		.loc 1 17 0
+  46              	@ 17 ".\main.c" 1
+  47 0008 62B6     		CPSIE   i
+  48              	@ 0 "" 2
+  49              		.thumb
+  50              	.L2:
+  18:.\main.c      ****  for(;;) /* do forever */
+  19:.\main.c      ****  {
+  20:.\main.c      ****    //CAN_1_SendMsg0();
+  21:.\main.c      ****  CAN_1_SendMsg1();
+  51              		.loc 1 21 0 discriminator 1
+  52 000a FFF7FEFF 		bl	CAN_1_SendMsg1
+  22:.\main.c      ****  //Tx_Data++;
+  23:.\main.c      ****  //CyDelay(1000);
+  24:.\main.c      ****  //CAN_1_SendMsg0();
+  25:.\main.c      ****  //Tx_Data--;
+  26:.\main.c      ****  //CyDelay(1000);
+  27:.\main.c      ****  }
+  53              		.loc 1 27 0 discriminator 1
+  54 000e FCE7     		b	.L2
+  55              		.cfi_endproc
+  56              	.LFE56:
+  57              		.size	main, .-main
+  58              		.text
+  59              	.Letext0:
+  60              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.1\\psoc creator\\import\\gnu_cs\\arm\\4
+  61              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.1\\psoc creator\\import\\gnu_cs\\arm\\4
+  62              		.file 4 ".\\Generated_Source\\PSoC5/cytypes.h"
+  63              		.file 5 ".\\Generated_Source\\PSoC5/core_cm3.h"
+  64              		.section	.debug_info,"",%progbits
+  65              	.Ldebug_info0:
+  66 0000 DC000000 		.4byte	0xdc
+  67 0004 0400     		.2byte	0x4
+  68 0006 00000000 		.4byte	.Ldebug_abbrev0
+  69 000a 04       		.byte	0x4
+  70 000b 01       		.uleb128 0x1
+  71 000c 0E010000 		.4byte	.LASF18
+  72 0010 01       		.byte	0x1
+  73 0011 C2000000 		.4byte	.LASF19
+  74 0015 2E000000 		.4byte	.LASF20
+  75 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  76 001d 00000000 		.4byte	0
+  77 0021 00000000 		.4byte	.Ldebug_line0
+  78 0025 02       		.uleb128 0x2
+  79 0026 01       		.byte	0x1
+  80 0027 06       		.byte	0x6
+  81 0028 E8000000 		.4byte	.LASF0
+  82 002c 02       		.uleb128 0x2
+  83 002d 01       		.byte	0x1
+  84 002e 08       		.byte	0x8
+  85 002f A3000000 		.4byte	.LASF1
+  86 0033 02       		.uleb128 0x2
+  87 0034 02       		.byte	0x2
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccmp2gTy.s 			page 3
+
+
+  88 0035 05       		.byte	0x5
+  89 0036 04010000 		.4byte	.LASF2
+  90 003a 02       		.uleb128 0x2
+  91 003b 02       		.byte	0x2
+  92 003c 07       		.byte	0x7
+  93 003d 0E000000 		.4byte	.LASF3
+  94 0041 03       		.uleb128 0x3
+  95 0042 F4000000 		.4byte	.LASF9
+  96 0046 02       		.byte	0x2
+  97 0047 37       		.byte	0x37
+  98 0048 4C000000 		.4byte	0x4c
+  99 004c 02       		.uleb128 0x2
+ 100 004d 04       		.byte	0x4
+ 101 004e 05       		.byte	0x5
+ 102 004f B9000000 		.4byte	.LASF4
+ 103 0053 02       		.uleb128 0x2
+ 104 0054 04       		.byte	0x4
+ 105 0055 07       		.byte	0x7
+ 106 0056 7A000000 		.4byte	.LASF5
+ 107 005a 02       		.uleb128 0x2
+ 108 005b 08       		.byte	0x8
+ 109 005c 05       		.byte	0x5
+ 110 005d 00000000 		.4byte	.LASF6
+ 111 0061 02       		.uleb128 0x2
+ 112 0062 08       		.byte	0x8
+ 113 0063 07       		.byte	0x7
+ 114 0064 8C000000 		.4byte	.LASF7
+ 115 0068 04       		.uleb128 0x4
+ 116 0069 04       		.byte	0x4
+ 117 006a 05       		.byte	0x5
+ 118 006b 696E7400 		.ascii	"int\000"
+ 119 006f 02       		.uleb128 0x2
+ 120 0070 04       		.byte	0x4
+ 121 0071 07       		.byte	0x7
+ 122 0072 21000000 		.4byte	.LASF8
+ 123 0076 03       		.uleb128 0x3
+ 124 0077 8A010000 		.4byte	.LASF10
+ 125 007b 03       		.byte	0x3
+ 126 007c 41       		.byte	0x41
+ 127 007d 41000000 		.4byte	0x41
+ 128 0081 03       		.uleb128 0x3
+ 129 0082 74000000 		.4byte	.LASF11
+ 130 0086 04       		.byte	0x4
+ 131 0087 A1       		.byte	0xa1
+ 132 0088 2C000000 		.4byte	0x2c
+ 133 008c 02       		.uleb128 0x2
+ 134 008d 04       		.byte	0x4
+ 135 008e 04       		.byte	0x4
+ 136 008f FE000000 		.4byte	.LASF12
+ 137 0093 02       		.uleb128 0x2
+ 138 0094 08       		.byte	0x8
+ 139 0095 04       		.byte	0x4
+ 140 0096 CB000000 		.4byte	.LASF13
+ 141 009a 02       		.uleb128 0x2
+ 142 009b 01       		.byte	0x1
+ 143 009c 08       		.byte	0x8
+ 144 009d 92010000 		.4byte	.LASF14
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccmp2gTy.s 			page 4
+
+
+ 145 00a1 02       		.uleb128 0x2
+ 146 00a2 04       		.byte	0x4
+ 147 00a3 07       		.byte	0x7
+ 148 00a4 D2000000 		.4byte	.LASF15
+ 149 00a8 05       		.uleb128 0x5
+ 150 00a9 6F000000 		.4byte	.LASF21
+ 151 00ad 01       		.byte	0x1
+ 152 00ae 0E       		.byte	0xe
+ 153 00af 68000000 		.4byte	0x68
+ 154 00b3 00000000 		.4byte	.LFB56
+ 155 00b7 10000000 		.4byte	.LFE56-.LFB56
+ 156 00bb 01       		.uleb128 0x1
+ 157 00bc 9C       		.byte	0x9c
+ 158 00bd 06       		.uleb128 0x6
+ 159 00be DB000000 		.4byte	.LASF16
+ 160 00c2 05       		.byte	0x5
+ 161 00c3 1606     		.2byte	0x616
+ 162 00c5 C9000000 		.4byte	0xc9
+ 163 00c9 07       		.uleb128 0x7
+ 164 00ca 76000000 		.4byte	0x76
+ 165 00ce 08       		.uleb128 0x8
+ 166 00cf B1000000 		.4byte	.LASF17
+ 167 00d3 01       		.byte	0x1
+ 168 00d4 0D       		.byte	0xd
+ 169 00d5 81000000 		.4byte	0x81
+ 170 00d9 05       		.uleb128 0x5
+ 171 00da 03       		.byte	0x3
+ 172 00db 00000000 		.4byte	Tx_Data
+ 173 00df 00       		.byte	0
+ 174              		.section	.debug_abbrev,"",%progbits
+ 175              	.Ldebug_abbrev0:
+ 176 0000 01       		.uleb128 0x1
+ 177 0001 11       		.uleb128 0x11
+ 178 0002 01       		.byte	0x1
+ 179 0003 25       		.uleb128 0x25
+ 180 0004 0E       		.uleb128 0xe
+ 181 0005 13       		.uleb128 0x13
+ 182 0006 0B       		.uleb128 0xb
+ 183 0007 03       		.uleb128 0x3
+ 184 0008 0E       		.uleb128 0xe
+ 185 0009 1B       		.uleb128 0x1b
+ 186 000a 0E       		.uleb128 0xe
+ 187 000b 55       		.uleb128 0x55
+ 188 000c 17       		.uleb128 0x17
+ 189 000d 11       		.uleb128 0x11
+ 190 000e 01       		.uleb128 0x1
+ 191 000f 10       		.uleb128 0x10
+ 192 0010 17       		.uleb128 0x17
+ 193 0011 00       		.byte	0
+ 194 0012 00       		.byte	0
+ 195 0013 02       		.uleb128 0x2
+ 196 0014 24       		.uleb128 0x24
+ 197 0015 00       		.byte	0
+ 198 0016 0B       		.uleb128 0xb
+ 199 0017 0B       		.uleb128 0xb
+ 200 0018 3E       		.uleb128 0x3e
+ 201 0019 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccmp2gTy.s 			page 5
+
+
+ 202 001a 03       		.uleb128 0x3
+ 203 001b 0E       		.uleb128 0xe
+ 204 001c 00       		.byte	0
+ 205 001d 00       		.byte	0
+ 206 001e 03       		.uleb128 0x3
+ 207 001f 16       		.uleb128 0x16
+ 208 0020 00       		.byte	0
+ 209 0021 03       		.uleb128 0x3
+ 210 0022 0E       		.uleb128 0xe
+ 211 0023 3A       		.uleb128 0x3a
+ 212 0024 0B       		.uleb128 0xb
+ 213 0025 3B       		.uleb128 0x3b
+ 214 0026 0B       		.uleb128 0xb
+ 215 0027 49       		.uleb128 0x49
+ 216 0028 13       		.uleb128 0x13
+ 217 0029 00       		.byte	0
+ 218 002a 00       		.byte	0
+ 219 002b 04       		.uleb128 0x4
+ 220 002c 24       		.uleb128 0x24
+ 221 002d 00       		.byte	0
+ 222 002e 0B       		.uleb128 0xb
+ 223 002f 0B       		.uleb128 0xb
+ 224 0030 3E       		.uleb128 0x3e
+ 225 0031 0B       		.uleb128 0xb
+ 226 0032 03       		.uleb128 0x3
+ 227 0033 08       		.uleb128 0x8
+ 228 0034 00       		.byte	0
+ 229 0035 00       		.byte	0
+ 230 0036 05       		.uleb128 0x5
+ 231 0037 2E       		.uleb128 0x2e
+ 232 0038 00       		.byte	0
+ 233 0039 3F       		.uleb128 0x3f
+ 234 003a 19       		.uleb128 0x19
+ 235 003b 03       		.uleb128 0x3
+ 236 003c 0E       		.uleb128 0xe
+ 237 003d 3A       		.uleb128 0x3a
+ 238 003e 0B       		.uleb128 0xb
+ 239 003f 3B       		.uleb128 0x3b
+ 240 0040 0B       		.uleb128 0xb
+ 241 0041 49       		.uleb128 0x49
+ 242 0042 13       		.uleb128 0x13
+ 243 0043 11       		.uleb128 0x11
+ 244 0044 01       		.uleb128 0x1
+ 245 0045 12       		.uleb128 0x12
+ 246 0046 06       		.uleb128 0x6
+ 247 0047 40       		.uleb128 0x40
+ 248 0048 18       		.uleb128 0x18
+ 249 0049 9642     		.uleb128 0x2116
+ 250 004b 19       		.uleb128 0x19
+ 251 004c 00       		.byte	0
+ 252 004d 00       		.byte	0
+ 253 004e 06       		.uleb128 0x6
+ 254 004f 34       		.uleb128 0x34
+ 255 0050 00       		.byte	0
+ 256 0051 03       		.uleb128 0x3
+ 257 0052 0E       		.uleb128 0xe
+ 258 0053 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccmp2gTy.s 			page 6
+
+
+ 259 0054 0B       		.uleb128 0xb
+ 260 0055 3B       		.uleb128 0x3b
+ 261 0056 05       		.uleb128 0x5
+ 262 0057 49       		.uleb128 0x49
+ 263 0058 13       		.uleb128 0x13
+ 264 0059 3F       		.uleb128 0x3f
+ 265 005a 19       		.uleb128 0x19
+ 266 005b 3C       		.uleb128 0x3c
+ 267 005c 19       		.uleb128 0x19
+ 268 005d 00       		.byte	0
+ 269 005e 00       		.byte	0
+ 270 005f 07       		.uleb128 0x7
+ 271 0060 35       		.uleb128 0x35
+ 272 0061 00       		.byte	0
+ 273 0062 49       		.uleb128 0x49
+ 274 0063 13       		.uleb128 0x13
+ 275 0064 00       		.byte	0
+ 276 0065 00       		.byte	0
+ 277 0066 08       		.uleb128 0x8
+ 278 0067 34       		.uleb128 0x34
+ 279 0068 00       		.byte	0
+ 280 0069 03       		.uleb128 0x3
+ 281 006a 0E       		.uleb128 0xe
+ 282 006b 3A       		.uleb128 0x3a
+ 283 006c 0B       		.uleb128 0xb
+ 284 006d 3B       		.uleb128 0x3b
+ 285 006e 0B       		.uleb128 0xb
+ 286 006f 49       		.uleb128 0x49
+ 287 0070 13       		.uleb128 0x13
+ 288 0071 3F       		.uleb128 0x3f
+ 289 0072 19       		.uleb128 0x19
+ 290 0073 02       		.uleb128 0x2
+ 291 0074 18       		.uleb128 0x18
+ 292 0075 00       		.byte	0
+ 293 0076 00       		.byte	0
+ 294 0077 00       		.byte	0
+ 295              		.section	.debug_aranges,"",%progbits
+ 296 0000 1C000000 		.4byte	0x1c
+ 297 0004 0200     		.2byte	0x2
+ 298 0006 00000000 		.4byte	.Ldebug_info0
+ 299 000a 04       		.byte	0x4
+ 300 000b 00       		.byte	0
+ 301 000c 0000     		.2byte	0
+ 302 000e 0000     		.2byte	0
+ 303 0010 00000000 		.4byte	.LFB56
+ 304 0014 10000000 		.4byte	.LFE56-.LFB56
+ 305 0018 00000000 		.4byte	0
+ 306 001c 00000000 		.4byte	0
+ 307              		.section	.debug_ranges,"",%progbits
+ 308              	.Ldebug_ranges0:
+ 309 0000 00000000 		.4byte	.LFB56
+ 310 0004 10000000 		.4byte	.LFE56
+ 311 0008 00000000 		.4byte	0
+ 312 000c 00000000 		.4byte	0
+ 313              		.section	.debug_line,"",%progbits
+ 314              	.Ldebug_line0:
+ 315 0000 72010000 		.section	.debug_str,"MS",%progbits,1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccmp2gTy.s 			page 7
+
+
+ 315      02005101 
+ 315      00000201 
+ 315      FB0E0D00 
+ 315      01010101 
+ 316              	.LASF6:
+ 317 0000 6C6F6E67 		.ascii	"long long int\000"
+ 317      206C6F6E 
+ 317      6720696E 
+ 317      7400
+ 318              	.LASF3:
+ 319 000e 73686F72 		.ascii	"short unsigned int\000"
+ 319      7420756E 
+ 319      7369676E 
+ 319      65642069 
+ 319      6E7400
+ 320              	.LASF8:
+ 321 0021 756E7369 		.ascii	"unsigned int\000"
+ 321      676E6564 
+ 321      20696E74 
+ 321      00
+ 322              	.LASF20:
+ 323 002e 433A5C55 		.ascii	"C:\\Users\\Schuyler\\Documents\\PSoC Creator\\Desig"
+ 323      73657273 
+ 323      5C536368 
+ 323      75796C65 
+ 323      725C446F 
+ 324 005c 6E30325C 		.ascii	"n02\\Design02.cydsn\000"
+ 324      44657369 
+ 324      676E3032 
+ 324      2E637964 
+ 324      736E00
+ 325              	.LASF21:
+ 326 006f 6D61696E 		.ascii	"main\000"
+ 326      00
+ 327              	.LASF11:
+ 328 0074 75696E74 		.ascii	"uint8\000"
+ 328      3800
+ 329              	.LASF5:
+ 330 007a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 330      20756E73 
+ 330      69676E65 
+ 330      6420696E 
+ 330      7400
+ 331              	.LASF7:
+ 332 008c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 332      206C6F6E 
+ 332      6720756E 
+ 332      7369676E 
+ 332      65642069 
+ 333              	.LASF1:
+ 334 00a3 756E7369 		.ascii	"unsigned char\000"
+ 334      676E6564 
+ 334      20636861 
+ 334      7200
+ 335              	.LASF17:
+ 336 00b1 54785F44 		.ascii	"Tx_Data\000"
+ 336      61746100 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccmp2gTy.s 			page 8
+
+
+ 337              	.LASF4:
+ 338 00b9 6C6F6E67 		.ascii	"long int\000"
+ 338      20696E74 
+ 338      00
+ 339              	.LASF19:
+ 340 00c2 2E5C6D61 		.ascii	".\\main.c\000"
+ 340      696E2E63 
+ 340      00
+ 341              	.LASF13:
+ 342 00cb 646F7562 		.ascii	"double\000"
+ 342      6C6500
+ 343              	.LASF15:
+ 344 00d2 73697A65 		.ascii	"sizetype\000"
+ 344      74797065 
+ 344      00
+ 345              	.LASF16:
+ 346 00db 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 346      52784275 
+ 346      66666572 
+ 346      00
+ 347              	.LASF0:
+ 348 00e8 7369676E 		.ascii	"signed char\000"
+ 348      65642063 
+ 348      68617200 
+ 349              	.LASF9:
+ 350 00f4 5F5F696E 		.ascii	"__int32_t\000"
+ 350      7433325F 
+ 350      7400
+ 351              	.LASF12:
+ 352 00fe 666C6F61 		.ascii	"float\000"
+ 352      7400
+ 353              	.LASF2:
+ 354 0104 73686F72 		.ascii	"short int\000"
+ 354      7420696E 
+ 354      7400
+ 355              	.LASF18:
+ 356 010e 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 356      4320342E 
+ 356      382E3420 
+ 356      32303134 
+ 356      30353236 
+ 357 0141 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 357      20726576 
+ 357      6973696F 
+ 357      6E203231 
+ 357      31333538 
+ 358 0174 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 358      66756E63 
+ 358      74696F6E 
+ 358      2D736563 
+ 358      74696F6E 
+ 359              	.LASF10:
+ 360 018a 696E7433 		.ascii	"int32_t\000"
+ 360      325F7400 
+ 361              	.LASF14:
+ 362 0192 63686172 		.ascii	"char\000"
+ 362      00
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccmp2gTy.s 			page 9
+
+
+ 363              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

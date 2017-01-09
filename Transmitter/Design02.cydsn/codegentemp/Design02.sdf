@@ -1,0 +1,27 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2017-01-09T00:02:18Z")
+ (DESIGN "Design02")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 3.1 SP2")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "Design02")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT ClockBlock.clk_bus_glb \\CAN_1\:isr\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT Rx_1\(0\).fb \\CAN_1\:CanIP\\.can_rx (3.596:3.596:3.596))
+    (INTERCONNECT \\CAN_1\:CanIP\\.can_tx Tx_1\(0\).pin_input (2.951:2.951:2.951))
+    (INTERCONNECT \\CAN_1\:CanIP\\.interrupt \\CAN_1\:isr\\.interrupt (1.000:1.000:1.000))
+    (INTERCONNECT Tx_1\(0\).pad_out Tx_1\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.clk_bus_glb_ff \\CAN_1\:CanIP\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT Rx_1\(0\)_PAD Rx_1\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Tx_1\(0\).pad_out Tx_1\(0\)_PAD (0.000:0.000:0.000))
+    (INTERCONNECT Tx_1\(0\)_PAD Tx_1\(0\).pad_in (0.000:0.000:0.000))
+   )
+  )
+ )
+)
