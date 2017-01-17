@@ -132,14 +132,8 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Design02.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Design02.cydsn\main.c" />
-<name v=".\Design02.cydsn\Design02.cydwr" />
-<name v=".\Design02.cydsn\Generated_Source\PSoC5\CAN_1.h" />
-<name v=".\Design02.cydsn\Generated_Source\PSoC5\CAN_1_TX_RX_func.c" />
-<name v=".\Design02.cydsn\Generated_Source\PSoC5\CAN_1.c" />
-<name v=".\Design02.cydsn\Generated_Source\PSoC5\CAN_1_INT.c" />
-<name v=".\Design02.cydsn\Generated_Source\PSoC5\CAN_1_PM.c" />
+<name v=".\Design02.cydsn\TopDesign\TopDesign.cysch" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

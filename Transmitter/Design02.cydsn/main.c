@@ -11,8 +11,9 @@ int main()
  CyGlobalIntEnable;
  for(;;) /* do forever */
  {
-    CAN_1_SendMsg0(); // Sends message to mailboxes 0 and 1 respectively.
-    CAN_1_SendMsg1(); // Sends whatever data is held in Tx_Data
+    CAN_1_SendMsg1(); // Sends message to mailboxes 0 and 1 respectively.
+    CAN_1_SendMsg0(); // Sends whatever data is held in Tx_Data
+    CyDelay(500);
  }
 return 0;
 }

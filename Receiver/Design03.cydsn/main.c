@@ -21,7 +21,6 @@ int main()
         LED_Write(1);
         CyDelay(200);
         LED_Write(0);
-        CyDelay(200);
     }
  }
 return 0;
