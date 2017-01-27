@@ -8,6 +8,7 @@
 <files />
 <projects>
 <v>.\Design02.cydsn\Design02.cyprj</v>
+<v>..\Receiver\Design03.cydsn\Design03.cyprj</v>
 </projects>
 <workspace_id v="43da3875-b007-4377-9f84-9cf848d47471" />
 <WriteAppVersionLastSavedWith v="3.1.0.2177" />

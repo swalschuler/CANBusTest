@@ -561,9 +561,8 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
     void CAN_1_ReceiveMsg0(void) 
     {
         /* `#START MESSAGE_0_RECEIVED` */
-            Rx_Data = CAN_1_RX_DATA_BYTE1(0);
             GREEN_Write(1);
-            CyDelay(200);
+            Rx_Data = CAN_1_RX_DATA_BYTE1(0);
             GREEN_Write(0);
         /* `#END` */
     
@@ -597,9 +596,8 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
     {
         /* `#START MESSAGE_1_RECEIVED` */
         
-            Rx_Data = CAN_1_RX_DATA_BYTE1(0);
             RED_Write(1);
-            CyDelay(200);
+            Rx_Data = CAN_1_RX_DATA_BYTE1(0);
             RED_Write(0);
 
         /* `#END` */

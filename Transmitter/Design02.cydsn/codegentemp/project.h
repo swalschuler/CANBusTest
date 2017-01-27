@@ -24,6 +24,10 @@
 #include <Tx_1_aliases.h>
 #include <Tx_1.h>
 #include <CAN_1.h>
+#include <Timer_1.h>
+#include <isr_1.h>
+#include <LED_1_aliases.h>
+#include <LED_1.h>
 #include <core_cm3_psoc5.h>
 #include <core_cm3.h>
 #include <CyDmac.h>

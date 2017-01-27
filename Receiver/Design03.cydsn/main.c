@@ -19,7 +19,7 @@ int main()
     if (Rx_Data == 0x0)
     {
         LED_Write(1);
-        CyDelay(200);
+        CyDelay(500);
         LED_Write(0);
     }
  }
