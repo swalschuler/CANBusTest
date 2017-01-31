@@ -1,0 +1,551 @@
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccX8dfEf.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"cymetadata.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	cy_meta_configecc
+  19              		.section	.cyconfigecc,"a",%progbits
+  20              		.align	2
+  21              		.type	cy_meta_configecc, %object
+  22              		.size	cy_meta_configecc, 60
+  23              	cy_meta_configecc:
+  24 0000 01       		.byte	1
+  25 0001 52       		.byte	82
+  26 0002 00       		.byte	0
+  27 0003 40       		.byte	64
+  28 0004 04       		.byte	4
+  29 0005 4C       		.byte	76
+  30 0006 01       		.byte	1
+  31 0007 40       		.byte	64
+  32 0008 06       		.byte	6
+  33 0009 4D       		.byte	77
+  34 000a 01       		.byte	1
+  35 000b 40       		.byte	64
+  36 000c 08       		.byte	8
+  37 000d 40       		.byte	64
+  38 000e 0C       		.byte	12
+  39 000f 10       		.byte	16
+  40 0010 5D       		.byte	93
+  41 0011 02       		.byte	2
+  42 0012 C2       		.byte	-62
+  43 0013 01       		.byte	1
+  44 0014 D6       		.byte	-42
+  45 0015 01       		.byte	1
+  46 0016 19       		.byte	25
+  47 0017 02       		.byte	2
+  48 0018 78       		.byte	120
+  49 0019 10       		.byte	16
+  50 001a 98       		.byte	-104
+  51 001b 10       		.byte	16
+  52 001c 9D       		.byte	-99
+  53 001d 02       		.byte	2
+  54 001e C6       		.byte	-58
+  55 001f 08       		.byte	8
+  56 0020 DE       		.byte	-34
+  57 0021 02       		.byte	2
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccX8dfEf.s 			page 2
+
+
+  58 0022 00       		.byte	0
+  59 0023 00       		.byte	0
+  60 0024 00       		.byte	0
+  61 0025 0C       		.byte	12
+  62 0026 0C       		.byte	12
+  63 0027 00       		.byte	0
+  64 0028 00       		.byte	0
+  65 0029 00       		.byte	0
+  66 002a 00       		.byte	0
+  67 002b 00       		.byte	0
+  68 002c 80       		.byte	-128
+  69 002d 4B       		.byte	75
+  70 002e 4B       		.byte	75
+  71 002f 00       		.byte	0
+  72 0030 40       		.byte	64
+  73 0031 00       		.byte	0
+  74 0032 00       		.byte	0
+  75 0033 00       		.byte	0
+  76 0034 00       		.byte	0
+  77 0035 02       		.byte	2
+  78 0036 02       		.byte	2
+  79 0037 00       		.byte	0
+  80 0038 00       		.byte	0
+  81 0039 00       		.byte	0
+  82 003a 00       		.byte	0
+  83 003b 00       		.byte	0
+  84              		.global	cy_meta_custnvl
+  85              		.section	.cycustnvl,"a",%progbits
+  86              		.align	2
+  87              		.type	cy_meta_custnvl, %object
+  88              		.size	cy_meta_custnvl, 4
+  89              	cy_meta_custnvl:
+  90 0000 00       		.byte	0
+  91 0001 00       		.byte	0
+  92 0002 40       		.byte	64
+  93 0003 05       		.byte	5
+  94              		.global	cy_meta_wonvl
+  95              		.section	.cywolatch,"a",%progbits
+  96              		.align	2
+  97              		.type	cy_meta_wonvl, %object
+  98              		.size	cy_meta_wonvl, 4
+  99              	cy_meta_wonvl:
+ 100 0000 BC       		.byte	-68
+ 101 0001 90       		.byte	-112
+ 102 0002 AC       		.byte	-84
+ 103 0003 AF       		.byte	-81
+ 104              		.global	cy_meta_flashprotect
+ 105              		.section	.cyflashprotect,"a",%progbits
+ 106              		.align	2
+ 107              		.type	cy_meta_flashprotect, %object
+ 108              		.size	cy_meta_flashprotect, 256
+ 109              	cy_meta_flashprotect:
+ 110 0000 00000000 		.space	256
+ 110      00000000 
+ 110      00000000 
+ 110      00000000 
+ 110      00000000 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccX8dfEf.s 			page 3
+
+
+ 111              		.global	cy_metadata
+ 112              		.section	.cymeta,"a",%progbits
+ 113              		.align	2
+ 114              		.type	cy_metadata, %object
+ 115              		.size	cy_metadata, 12
+ 116              	cy_metadata:
+ 117 0000 00       		.byte	0
+ 118 0001 01       		.byte	1
+ 119 0002 2E       		.byte	46
+ 120 0003 16       		.byte	22
+ 121 0004 10       		.byte	16
+ 122 0005 69       		.byte	105
+ 123 0006 00       		.byte	0
+ 124 0007 01       		.byte	1
+ 125 0008 00       		.byte	0
+ 126 0009 00       		.byte	0
+ 127 000a 00       		.byte	0
+ 128 000b 00       		.byte	0
+ 129              		.text
+ 130              	.Letext0:
+ 131              		.file 1 "Generated_Source\\PSoC5\\cymetadata.c"
+ 132              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 133              		.section	.debug_info,"",%progbits
+ 134              	.Ldebug_info0:
+ 135 0000 36010000 		.4byte	0x136
+ 136 0004 0400     		.2byte	0x4
+ 137 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 138 000a 04       		.byte	0x4
+ 139 000b 01       		.uleb128 0x1
+ 140 000c 00000000 		.4byte	.LASF18
+ 141 0010 01       		.byte	0x1
+ 142 0011 D0010000 		.4byte	.LASF19
+ 143 0015 EA000000 		.4byte	.LASF20
+ 144 0019 00000000 		.4byte	.Ldebug_line0
+ 145 001d 02       		.uleb128 0x2
+ 146 001e 01       		.byte	0x1
+ 147 001f 06       		.byte	0x6
+ 148 0020 C4010000 		.4byte	.LASF0
+ 149 0024 02       		.uleb128 0x2
+ 150 0025 01       		.byte	0x1
+ 151 0026 08       		.byte	0x8
+ 152 0027 A0000000 		.4byte	.LASF1
+ 153 002b 02       		.uleb128 0x2
+ 154 002c 02       		.byte	0x2
+ 155 002d 05       		.byte	0x5
+ 156 002e AB010000 		.4byte	.LASF2
+ 157 0032 02       		.uleb128 0x2
+ 158 0033 02       		.byte	0x2
+ 159 0034 07       		.byte	0x7
+ 160 0035 C0000000 		.4byte	.LASF3
+ 161 0039 02       		.uleb128 0x2
+ 162 003a 04       		.byte	0x4
+ 163 003b 05       		.byte	0x5
+ 164 003c BB010000 		.4byte	.LASF4
+ 165 0040 02       		.uleb128 0x2
+ 166 0041 04       		.byte	0x4
+ 167 0042 07       		.byte	0x7
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccX8dfEf.s 			page 4
+
+
+ 168 0043 AE000000 		.4byte	.LASF5
+ 169 0047 02       		.uleb128 0x2
+ 170 0048 08       		.byte	0x8
+ 171 0049 05       		.byte	0x5
+ 172 004a 98010000 		.4byte	.LASF6
+ 173 004e 02       		.uleb128 0x2
+ 174 004f 08       		.byte	0x8
+ 175 0050 07       		.byte	0x7
+ 176 0051 55010000 		.4byte	.LASF7
+ 177 0055 03       		.uleb128 0x3
+ 178 0056 04       		.byte	0x4
+ 179 0057 05       		.byte	0x5
+ 180 0058 696E7400 		.ascii	"int\000"
+ 181 005c 02       		.uleb128 0x2
+ 182 005d 04       		.byte	0x4
+ 183 005e 07       		.byte	0x7
+ 184 005f 48010000 		.4byte	.LASF8
+ 185 0063 04       		.uleb128 0x4
+ 186 0064 B5010000 		.4byte	.LASF21
+ 187 0068 02       		.byte	0x2
+ 188 0069 9201     		.2byte	0x192
+ 189 006b 24000000 		.4byte	0x24
+ 190 006f 02       		.uleb128 0x2
+ 191 0070 04       		.byte	0x4
+ 192 0071 04       		.byte	0x4
+ 193 0072 9A000000 		.4byte	.LASF9
+ 194 0076 02       		.uleb128 0x2
+ 195 0077 08       		.byte	0x8
+ 196 0078 04       		.byte	0x4
+ 197 0079 D3000000 		.4byte	.LASF10
+ 198 007d 02       		.uleb128 0x2
+ 199 007e 01       		.byte	0x1
+ 200 007f 08       		.byte	0x8
+ 201 0080 A6010000 		.4byte	.LASF11
+ 202 0084 05       		.uleb128 0x5
+ 203 0085 63000000 		.4byte	0x63
+ 204 0089 94000000 		.4byte	0x94
+ 205 008d 06       		.uleb128 0x6
+ 206 008e 94000000 		.4byte	0x94
+ 207 0092 3B       		.byte	0x3b
+ 208 0093 00       		.byte	0
+ 209 0094 02       		.uleb128 0x2
+ 210 0095 04       		.byte	0x4
+ 211 0096 07       		.byte	0x7
+ 212 0097 8F010000 		.4byte	.LASF12
+ 213 009b 07       		.uleb128 0x7
+ 214 009c 36010000 		.4byte	.LASF13
+ 215 00a0 01       		.byte	0x1
+ 216 00a1 1F       		.byte	0x1f
+ 217 00a2 AC000000 		.4byte	0xac
+ 218 00a6 05       		.uleb128 0x5
+ 219 00a7 03       		.byte	0x3
+ 220 00a8 00000000 		.4byte	cy_meta_configecc
+ 221 00ac 08       		.uleb128 0x8
+ 222 00ad 84000000 		.4byte	0x84
+ 223 00b1 05       		.uleb128 0x5
+ 224 00b2 63000000 		.4byte	0x63
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccX8dfEf.s 			page 5
+
+
+ 225 00b6 C1000000 		.4byte	0xc1
+ 226 00ba 06       		.uleb128 0x6
+ 227 00bb 94000000 		.4byte	0x94
+ 228 00bf 03       		.byte	0x3
+ 229 00c0 00       		.byte	0
+ 230 00c1 07       		.uleb128 0x7
+ 231 00c2 DA000000 		.4byte	.LASF14
+ 232 00c6 01       		.byte	0x1
+ 233 00c7 34       		.byte	0x34
+ 234 00c8 D2000000 		.4byte	0xd2
+ 235 00cc 05       		.uleb128 0x5
+ 236 00cd 03       		.byte	0x3
+ 237 00ce 00000000 		.4byte	cy_meta_custnvl
+ 238 00d2 08       		.uleb128 0x8
+ 239 00d3 B1000000 		.4byte	0xb1
+ 240 00d7 07       		.uleb128 0x7
+ 241 00d8 81010000 		.4byte	.LASF15
+ 242 00dc 01       		.byte	0x1
+ 243 00dd 42       		.byte	0x42
+ 244 00de E8000000 		.4byte	0xe8
+ 245 00e2 05       		.uleb128 0x5
+ 246 00e3 03       		.byte	0x3
+ 247 00e4 00000000 		.4byte	cy_meta_wonvl
+ 248 00e8 08       		.uleb128 0x8
+ 249 00e9 B1000000 		.4byte	0xb1
+ 250 00ed 05       		.uleb128 0x5
+ 251 00ee 63000000 		.4byte	0x63
+ 252 00f2 FD000000 		.4byte	0xfd
+ 253 00f6 06       		.uleb128 0x6
+ 254 00f7 94000000 		.4byte	0x94
+ 255 00fb FF       		.byte	0xff
+ 256 00fc 00       		.byte	0
+ 257 00fd 07       		.uleb128 0x7
+ 258 00fe 6C010000 		.4byte	.LASF16
+ 259 0102 01       		.byte	0x1
+ 260 0103 50       		.byte	0x50
+ 261 0104 0E010000 		.4byte	0x10e
+ 262 0108 05       		.uleb128 0x5
+ 263 0109 03       		.byte	0x3
+ 264 010a 00000000 		.4byte	cy_meta_flashprotect
+ 265 010e 08       		.uleb128 0x8
+ 266 010f ED000000 		.4byte	0xed
+ 267 0113 05       		.uleb128 0x5
+ 268 0114 63000000 		.4byte	0x63
+ 269 0118 23010000 		.4byte	0x123
+ 270 011c 06       		.uleb128 0x6
+ 271 011d 94000000 		.4byte	0x94
+ 272 0121 0B       		.byte	0xb
+ 273 0122 00       		.byte	0
+ 274 0123 07       		.uleb128 0x7
+ 275 0124 8E000000 		.4byte	.LASF17
+ 276 0128 01       		.byte	0x1
+ 277 0129 7D       		.byte	0x7d
+ 278 012a 34010000 		.4byte	0x134
+ 279 012e 05       		.uleb128 0x5
+ 280 012f 03       		.byte	0x3
+ 281 0130 00000000 		.4byte	cy_metadata
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccX8dfEf.s 			page 6
+
+
+ 282 0134 08       		.uleb128 0x8
+ 283 0135 13010000 		.4byte	0x113
+ 284 0139 00       		.byte	0
+ 285              		.section	.debug_abbrev,"",%progbits
+ 286              	.Ldebug_abbrev0:
+ 287 0000 01       		.uleb128 0x1
+ 288 0001 11       		.uleb128 0x11
+ 289 0002 01       		.byte	0x1
+ 290 0003 25       		.uleb128 0x25
+ 291 0004 0E       		.uleb128 0xe
+ 292 0005 13       		.uleb128 0x13
+ 293 0006 0B       		.uleb128 0xb
+ 294 0007 03       		.uleb128 0x3
+ 295 0008 0E       		.uleb128 0xe
+ 296 0009 1B       		.uleb128 0x1b
+ 297 000a 0E       		.uleb128 0xe
+ 298 000b 10       		.uleb128 0x10
+ 299 000c 17       		.uleb128 0x17
+ 300 000d 00       		.byte	0
+ 301 000e 00       		.byte	0
+ 302 000f 02       		.uleb128 0x2
+ 303 0010 24       		.uleb128 0x24
+ 304 0011 00       		.byte	0
+ 305 0012 0B       		.uleb128 0xb
+ 306 0013 0B       		.uleb128 0xb
+ 307 0014 3E       		.uleb128 0x3e
+ 308 0015 0B       		.uleb128 0xb
+ 309 0016 03       		.uleb128 0x3
+ 310 0017 0E       		.uleb128 0xe
+ 311 0018 00       		.byte	0
+ 312 0019 00       		.byte	0
+ 313 001a 03       		.uleb128 0x3
+ 314 001b 24       		.uleb128 0x24
+ 315 001c 00       		.byte	0
+ 316 001d 0B       		.uleb128 0xb
+ 317 001e 0B       		.uleb128 0xb
+ 318 001f 3E       		.uleb128 0x3e
+ 319 0020 0B       		.uleb128 0xb
+ 320 0021 03       		.uleb128 0x3
+ 321 0022 08       		.uleb128 0x8
+ 322 0023 00       		.byte	0
+ 323 0024 00       		.byte	0
+ 324 0025 04       		.uleb128 0x4
+ 325 0026 16       		.uleb128 0x16
+ 326 0027 00       		.byte	0
+ 327 0028 03       		.uleb128 0x3
+ 328 0029 0E       		.uleb128 0xe
+ 329 002a 3A       		.uleb128 0x3a
+ 330 002b 0B       		.uleb128 0xb
+ 331 002c 3B       		.uleb128 0x3b
+ 332 002d 05       		.uleb128 0x5
+ 333 002e 49       		.uleb128 0x49
+ 334 002f 13       		.uleb128 0x13
+ 335 0030 00       		.byte	0
+ 336 0031 00       		.byte	0
+ 337 0032 05       		.uleb128 0x5
+ 338 0033 01       		.uleb128 0x1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccX8dfEf.s 			page 7
+
+
+ 339 0034 01       		.byte	0x1
+ 340 0035 49       		.uleb128 0x49
+ 341 0036 13       		.uleb128 0x13
+ 342 0037 01       		.uleb128 0x1
+ 343 0038 13       		.uleb128 0x13
+ 344 0039 00       		.byte	0
+ 345 003a 00       		.byte	0
+ 346 003b 06       		.uleb128 0x6
+ 347 003c 21       		.uleb128 0x21
+ 348 003d 00       		.byte	0
+ 349 003e 49       		.uleb128 0x49
+ 350 003f 13       		.uleb128 0x13
+ 351 0040 2F       		.uleb128 0x2f
+ 352 0041 0B       		.uleb128 0xb
+ 353 0042 00       		.byte	0
+ 354 0043 00       		.byte	0
+ 355 0044 07       		.uleb128 0x7
+ 356 0045 34       		.uleb128 0x34
+ 357 0046 00       		.byte	0
+ 358 0047 03       		.uleb128 0x3
+ 359 0048 0E       		.uleb128 0xe
+ 360 0049 3A       		.uleb128 0x3a
+ 361 004a 0B       		.uleb128 0xb
+ 362 004b 3B       		.uleb128 0x3b
+ 363 004c 0B       		.uleb128 0xb
+ 364 004d 49       		.uleb128 0x49
+ 365 004e 13       		.uleb128 0x13
+ 366 004f 3F       		.uleb128 0x3f
+ 367 0050 19       		.uleb128 0x19
+ 368 0051 02       		.uleb128 0x2
+ 369 0052 18       		.uleb128 0x18
+ 370 0053 00       		.byte	0
+ 371 0054 00       		.byte	0
+ 372 0055 08       		.uleb128 0x8
+ 373 0056 26       		.uleb128 0x26
+ 374 0057 00       		.byte	0
+ 375 0058 49       		.uleb128 0x49
+ 376 0059 13       		.uleb128 0x13
+ 377 005a 00       		.byte	0
+ 378 005b 00       		.byte	0
+ 379 005c 00       		.byte	0
+ 380              		.section	.debug_aranges,"",%progbits
+ 381 0000 14000000 		.4byte	0x14
+ 382 0004 0200     		.2byte	0x2
+ 383 0006 00000000 		.4byte	.Ldebug_info0
+ 384 000a 04       		.byte	0x4
+ 385 000b 00       		.byte	0
+ 386 000c 0000     		.2byte	0
+ 387 000e 0000     		.2byte	0
+ 388 0010 00000000 		.4byte	0
+ 389 0014 00000000 		.4byte	0
+ 390              		.section	.debug_line,"",%progbits
+ 391              	.Ldebug_line0:
+ 392 0000 4D000000 		.section	.debug_str,"MS",%progbits,1
+ 392      02004700 
+ 392      00000201 
+ 392      FB0E0D00 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccX8dfEf.s 			page 8
+
+
+ 392      01010101 
+ 393              	.LASF18:
+ 394 0000 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 394      4320342E 
+ 394      392E3320 
+ 394      32303135 
+ 394      30333033 
+ 395 0033 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 395      20726576 
+ 395      6973696F 
+ 395      6E203232 
+ 395      31323230 
+ 396 0066 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 396      66756E63 
+ 396      74696F6E 
+ 396      2D736563 
+ 396      74696F6E 
+ 397              	.LASF17:
+ 398 008e 63795F6D 		.ascii	"cy_metadata\000"
+ 398      65746164 
+ 398      61746100 
+ 399              	.LASF9:
+ 400 009a 666C6F61 		.ascii	"float\000"
+ 400      7400
+ 401              	.LASF1:
+ 402 00a0 756E7369 		.ascii	"unsigned char\000"
+ 402      676E6564 
+ 402      20636861 
+ 402      7200
+ 403              	.LASF5:
+ 404 00ae 6C6F6E67 		.ascii	"long unsigned int\000"
+ 404      20756E73 
+ 404      69676E65 
+ 404      6420696E 
+ 404      7400
+ 405              	.LASF3:
+ 406 00c0 73686F72 		.ascii	"short unsigned int\000"
+ 406      7420756E 
+ 406      7369676E 
+ 406      65642069 
+ 406      6E7400
+ 407              	.LASF10:
+ 408 00d3 646F7562 		.ascii	"double\000"
+ 408      6C6500
+ 409              	.LASF14:
+ 410 00da 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 410      6574615F 
+ 410      63757374 
+ 410      6E766C00 
+ 411              	.LASF20:
+ 412 00ea 433A5C55 		.ascii	"C:\\Users\\Schuyler\\Documents\\PSoC Creator\\CANBu"
+ 412      73657273 
+ 412      5C536368 
+ 412      75796C65 
+ 412      725C446F 
+ 413 0118 73546573 		.ascii	"sTest\\Receiver\\Design03.cydsn\000"
+ 413      745C5265 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccX8dfEf.s 			page 9
+
+
+ 413      63656976 
+ 413      65725C44 
+ 413      65736967 
+ 414              	.LASF13:
+ 415 0136 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 415      6574615F 
+ 415      636F6E66 
+ 415      69676563 
+ 415      6300
+ 416              	.LASF8:
+ 417 0148 756E7369 		.ascii	"unsigned int\000"
+ 417      676E6564 
+ 417      20696E74 
+ 417      00
+ 418              	.LASF7:
+ 419 0155 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 419      206C6F6E 
+ 419      6720756E 
+ 419      7369676E 
+ 419      65642069 
+ 420              	.LASF16:
+ 421 016c 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 421      6574615F 
+ 421      666C6173 
+ 421      6870726F 
+ 421      74656374 
+ 422              	.LASF15:
+ 423 0181 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 423      6574615F 
+ 423      776F6E76 
+ 423      6C00
+ 424              	.LASF12:
+ 425 018f 73697A65 		.ascii	"sizetype\000"
+ 425      74797065 
+ 425      00
+ 426              	.LASF6:
+ 427 0198 6C6F6E67 		.ascii	"long long int\000"
+ 427      206C6F6E 
+ 427      6720696E 
+ 427      7400
+ 428              	.LASF11:
+ 429 01a6 63686172 		.ascii	"char\000"
+ 429      00
+ 430              	.LASF2:
+ 431 01ab 73686F72 		.ascii	"short int\000"
+ 431      7420696E 
+ 431      7400
+ 432              	.LASF21:
+ 433 01b5 75696E74 		.ascii	"uint8\000"
+ 433      3800
+ 434              	.LASF4:
+ 435 01bb 6C6F6E67 		.ascii	"long int\000"
+ 435      20696E74 
+ 435      00
+ 436              	.LASF0:
+ 437 01c4 7369676E 		.ascii	"signed char\000"
+ 437      65642063 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccX8dfEf.s 			page 10
+
+
+ 437      68617200 
+ 438              	.LASF19:
+ 439 01d0 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 439      72617465 
+ 439      645F536F 
+ 439      75726365 
+ 439      5C50536F 
+ 440              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

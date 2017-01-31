@@ -2,7 +2,7 @@
 --	Conversion of Design02.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Jan 17 21:26:41 2017
+--	Sat Jan 28 11:42:59 2017
 --
 
 USE cypress.cypress.all;
@@ -26,9 +26,9 @@ SIGNAL tmpIO_0__Tx_1_net_0 : bit;
 TERMINAL tmpSIOVREF__Tx_1_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Tx_1_net_0 : bit;
 SIGNAL \CAN_1:Net_25\ : bit;
-SIGNAL Net_15 : bit;
-SIGNAL Net_9 : bit;
-SIGNAL Net_10 : bit;
+SIGNAL Net_94 : bit;
+SIGNAL Net_95 : bit;
+SIGNAL \CAN_1:Net_31\ : bit;
 SIGNAL \CAN_1:Net_30\ : bit;
 SIGNAL Net_16 : bit;
 SIGNAL Net_18 : bit;
@@ -344,13 +344,14 @@ Rx_1:cy_psoc3_pins_v1_10
 		pin_mode=>"I",
 		por_state=>4,
 		sio_group_cnt=>0,
-		sio_hifreq=>"",
+		sio_hifreq=>"00000000",
 		sio_hyst=>"1",
 		sio_ibuf=>"00000000",
 		sio_info=>"00",
 		sio_obuf=>"00000000",
 		sio_refsel=>"00000000",
 		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',
@@ -413,13 +414,14 @@ Tx_1:cy_psoc3_pins_v1_10
 		pin_mode=>"O",
 		por_state=>4,
 		sio_group_cnt=>0,
-		sio_hifreq=>"",
+		sio_hifreq=>"00000000",
 		sio_hyst=>"1",
 		sio_ibuf=>"00000000",
 		sio_info=>"00",
 		sio_obuf=>"00000000",
 		sio_refsel=>"00000000",
 		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',
@@ -467,11 +469,12 @@ Tx_1:cy_psoc3_pins_v1_10
 	PORT MAP(clock=>\CAN_1:Net_25\,
 		can_rx=>Net_11,
 		can_tx=>Net_12,
-		can_tx_en=>Net_15,
-		interrupt=>Net_9);
+		can_tx_en=>Net_94,
+		interrupt=>Net_95);
 \CAN_1:isr\:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10")
-	PORT MAP(int_signal=>Net_9);
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_95);
 timer_clock:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"c0fb34bd-1044-4931-9788-16b01ce89812",
@@ -770,7 +773,8 @@ timer_clock:cy_clock_v1_0
 			zero, zero, zero, zero),
 		po=>open);
 isr_1:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10")
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
 	PORT MAP(int_signal=>Net_26);
 LED_1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"e851a3b9-efb8-48be-bbb8-b303b216c393",
@@ -802,13 +806,14 @@ LED_1:cy_psoc3_pins_v1_10
 		pin_mode=>"O",
 		por_state=>4,
 		sio_group_cnt=>0,
-		sio_hifreq=>"",
+		sio_hifreq=>"00000000",
 		sio_hyst=>"1",
 		sio_ibuf=>"00000000",
 		sio_info=>"00",
 		sio_obuf=>"00000000",
 		sio_refsel=>"00000000",
 		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',

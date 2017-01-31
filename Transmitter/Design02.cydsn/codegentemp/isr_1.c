@@ -20,6 +20,7 @@
 #include <CyLib.h>
 #include <isr_1.h>
 
+
 #if !defined(isr_1__REMOVED) /* Check for removal by optimization */
 
 /*******************************************************************************
@@ -160,15 +161,22 @@ void isr_1_Stop(void)
 *******************************************************************************/
 CY_ISR(isr_1_Interrupt)
 {
+    #ifdef isr_1_INTERRUPT_INTERRUPT_CALLBACK
+        isr_1_Interrupt_InterruptCallback();
+    #endif /* isr_1_INTERRUPT_INTERRUPT_CALLBACK */ 
+
     /*  Place your Interrupt code here. */
     /* `#START isr_1_Interrupt` */
     
     CAN_1_SendMsg1(); // Sends message to mailboxes 0 and 1 respectively.
     CAN_1_SendMsg0(); // Sends whatever data is held in Tx_Data
-    LED_1_Write(1);
-    CyDelay(500);
-    LED_1_Write(0);
-    CyDelay(500);
+    CAN_1_SendMsg1(); // Sends message to mailboxes 0 and 1 respectively.
+    CAN_1_SendMsg0(); // Sends whatever data is held in Tx_Data
+    CAN_1_SendMsg1(); // Sends message to mailboxes 0 and 1 respectively.
+    CAN_1_SendMsg0(); // Sends whatever data is held in Tx_Data
+    CAN_1_SendMsg1(); // Sends message to mailboxes 0 and 1 respectively.
+    CAN_1_SendMsg1(); // Sends message to mailboxes 0 and 1 respectively.
+    CAN_1_SendMsg0(); // Sends whatever data is held in Tx_Data
     
     Timer_1_ReadStatusRegister();
     

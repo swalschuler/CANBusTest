@@ -1,0 +1,16 @@
+--------------- Build Started: 01/31/2017 11:36:26 Project: Design03, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/can_manga.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c ..\can_manga.c -o .\CortexM3\ARM_GCC_493\Debug\can_manga.o
+..\can_manga.c: In function 'can_send':
+..\can_manga.c:64:16: warning: unused variable 'state' [-Wunused-variable]
+     uint8_t i, state;
+                ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/CAN_1_TX_RX_func.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\CAN_1_TX_RX_func.c -o .\CortexM3\ARM_GCC_493\Debug\CAN_1_TX_RX_func.o
+arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_493\Debug\Design03.a .\CortexM3\ARM_GCC_493\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_493\Debug\Rx_1.o .\CortexM3\ARM_GCC_493\Debug\Tx_1.o .\CortexM3\ARM_GCC_493\Debug\CAN_1.o .\CortexM3\ARM_GCC_493\Debug\CAN_1_INT.o .\CortexM3\ARM_GCC_493\Debug\CAN_1_PM.o .\CortexM3\ARM_GCC_493\Debug\CAN_1_TX_RX_func.o .\CortexM3\ARM_GCC_493\Debug\CyDmac.o .\CortexM3\ARM_GCC_493\Debug\CyFlash.o .\CortexM3\ARM_GCC_493\Debug\CyLib.o .\CortexM3\ARM_GCC_493\Debug\cyPm.o .\CortexM3\ARM_GCC_493\Debug\CySpc.o .\CortexM3\ARM_GCC_493\Debug\cyutils.o .\CortexM3\ARM_GCC_493\Debug\LED.o .\CortexM3\ARM_GCC_493\Debug\GREEN.o .\CortexM3\ARM_GCC_493\Debug\RED.o .\CortexM3\ARM_GCC_493\Debug\CyBootAsmGnu.o
+arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_493\Debug\Design03.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o .\CortexM3\ARM_GCC_493\Debug\Design03.elf .\CortexM3\ARM_GCC_493\Debug\main.o .\CortexM3\ARM_GCC_493\Debug\can_manga.o .\CortexM3\ARM_GCC_493\Debug\cymetadata.o .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o .\CortexM3\ARM_GCC_493\Debug\Design03.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_493\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -g -ffunction-sections -O0 -ffat-lto-objects -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_493\Debug/Design03.map -T "C:\Users\Schuyler\Documents\PSoC Creator\CANBusTest\Receiver\Design03.cydsn\Generated_Source\PSoC5\cm3gcc.ld" -specs=nano.specs -Wl,--gc-sections -Wl,--end-group
+cyelftool.exe -C "C:\Users\Schuyler\Documents\PSoC Creator\CANBusTest\Receiver\Design03.cydsn\CortexM3\ARM_GCC_493\Debug\Design03.elf" --flash_row_size 256 --flash_size 262144
+cyelftool.exe -S "C:\Users\Schuyler\Documents\PSoC Creator\CANBusTest\Receiver\Design03.cydsn\CortexM3\ARM_GCC_493\Debug\Design03.elf"
+Flash used: 4966 of 262144 bytes (1.9 %).
+SRAM used: 2597 of 65536 bytes (4.0 %). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 01/31/2017 11:36:27 ---------------

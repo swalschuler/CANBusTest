@@ -5,6 +5,7 @@
 */
 #include <project.h>
 uint8 Rx_Data = 10;
+volatile unsigned int incrementedNumber = 0;
 
 int main()
 {
@@ -12,16 +13,18 @@ int main()
  CyGlobalIntEnable;
 
  for(;;) /* do forever */
- {
-    GREEN_Write(0);
-    RED_Write(0);
-    
-    if (Rx_Data == 0x0)
+ {  
+    if (incrementedNumber > 10)
     {
-        LED_Write(1);
-        CyDelay(500);
-        LED_Write(0);
+        RED_Write(1);
+        GREEN_Write(0);
     }
+    else
+    {
+        RED_Write(0);
+        GREEN_Write(1);
+    }
+        
  }
 return 0;
 }

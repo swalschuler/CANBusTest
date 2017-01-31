@@ -26,10 +26,10 @@ net Net_12
 	switch ":ioport1:inputs2_mux.pin6__pin_input==>:ioport1:pin6.pin_input"
 	term   ":ioport1:pin6.pin_input"
 end Net_12
-net Net_5
+net Net_25
 	term   ":cancell.interrupt"
 	switch ":cancell.interrupt==>Stub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v28+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v30"
 	switch "Stub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v28+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v30==>:interrupt_idmux_16.in_0"
 	switch ":interrupt_idmux_16.interrupt_idmux_16__out==>:interrupt_16.interrupt"
 	term   ":interrupt_16.interrupt"
-end Net_5
+end Net_25

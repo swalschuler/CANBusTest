@@ -2,7 +2,7 @@
 --	Conversion of Design03.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Jan 17 20:18:32 2017
+--	Sat Jan 28 11:42:45 2017
 --
 
 USE cypress.cypress.all;
@@ -26,9 +26,9 @@ SIGNAL tmpIO_0__Tx_1_net_0 : bit;
 TERMINAL tmpSIOVREF__Tx_1_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Tx_1_net_0 : bit;
 SIGNAL \CAN_1:Net_25\ : bit;
-SIGNAL Net_9 : bit;
-SIGNAL Net_5 : bit;
-SIGNAL Net_6 : bit;
+SIGNAL Net_24 : bit;
+SIGNAL Net_25 : bit;
+SIGNAL \CAN_1:Net_31\ : bit;
 SIGNAL \CAN_1:Net_30\ : bit;
 SIGNAL tmpOE__LED_net_0 : bit;
 SIGNAL tmpFB_0__LED_net_0 : bit;
@@ -81,13 +81,14 @@ Rx_1:cy_psoc3_pins_v1_10
 		pin_mode=>"I",
 		por_state=>4,
 		sio_group_cnt=>0,
-		sio_hifreq=>"",
+		sio_hifreq=>"00000000",
 		sio_hyst=>"1",
 		sio_ibuf=>"00000000",
 		sio_info=>"00",
 		sio_obuf=>"00000000",
 		sio_refsel=>"00000000",
 		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',
@@ -150,13 +151,14 @@ Tx_1:cy_psoc3_pins_v1_10
 		pin_mode=>"O",
 		por_state=>4,
 		sio_group_cnt=>0,
-		sio_hifreq=>"",
+		sio_hifreq=>"00000000",
 		sio_hyst=>"1",
 		sio_ibuf=>"00000000",
 		sio_info=>"00",
 		sio_obuf=>"00000000",
 		sio_refsel=>"00000000",
 		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',
@@ -204,11 +206,12 @@ Tx_1:cy_psoc3_pins_v1_10
 	PORT MAP(clock=>\CAN_1:Net_25\,
 		can_rx=>Net_11,
 		can_tx=>Net_12,
-		can_tx_en=>Net_9,
-		interrupt=>Net_5);
+		can_tx_en=>Net_24,
+		interrupt=>Net_25);
 \CAN_1:isr\:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10")
-	PORT MAP(int_signal=>Net_5);
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_25);
 LED:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"94796295-774c-4dab-8691-8d3b6b2dacce",
 		drive_mode=>"110",
@@ -239,13 +242,14 @@ LED:cy_psoc3_pins_v1_10
 		pin_mode=>"O",
 		por_state=>4,
 		sio_group_cnt=>0,
-		sio_hifreq=>"",
+		sio_hifreq=>"00000000",
 		sio_hyst=>"1",
 		sio_ibuf=>"00000000",
 		sio_info=>"00",
 		sio_obuf=>"00000000",
 		sio_refsel=>"00000000",
 		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',
@@ -308,13 +312,14 @@ GREEN:cy_psoc3_pins_v1_10
 		pin_mode=>"O",
 		por_state=>4,
 		sio_group_cnt=>0,
-		sio_hifreq=>"",
+		sio_hifreq=>"00000000",
 		sio_hyst=>"1",
 		sio_ibuf=>"00000000",
 		sio_info=>"00",
 		sio_obuf=>"00000000",
 		sio_refsel=>"00000000",
 		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',
@@ -377,13 +382,14 @@ RED:cy_psoc3_pins_v1_10
 		pin_mode=>"O",
 		por_state=>4,
 		sio_group_cnt=>0,
-		sio_hifreq=>"",
+		sio_hifreq=>"00000000",
 		sio_hyst=>"1",
 		sio_ibuf=>"00000000",
 		sio_info=>"00",
 		sio_obuf=>"00000000",
 		sio_refsel=>"00000000",
 		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',
